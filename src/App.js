@@ -1,21 +1,32 @@
-import logo from './logo.svg';
-import Button from './components/Button';
-import './App.css';
-
+import { Fragment } from 'react'; // La the chi de chua (wrapper) cac thanh phan nhung khong sinh ra the moi.
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { publicRoutes } from '~/Routes';
+import { DefaultLayout } from '~/components/Layout';
 function App() {
     return (
-        <div className="App">
-            <Button />
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <Router>
+            <div className="App">
+                <Routes>
+                    {publicRoutes.map((route, index) => {
+                        let Layout = DefaultLayout;
+                        if (route.layout) Layout = route.layout;
+                        else if (route.layout) Layout = Fragment;
+                        const Page = route.component;
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
+                    })}
+                </Routes>
+            </div>
+        </Router>
     );
 }
 

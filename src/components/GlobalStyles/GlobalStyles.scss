@@ -1,0 +1,23 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Karla:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+}
