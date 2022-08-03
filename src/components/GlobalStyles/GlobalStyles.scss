@@ -3,6 +3,8 @@
 :root {
     //color
     --primary: red;
+    --white: #fff;
+    --black: black;
     //default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
@@ -23,10 +25,10 @@ html {
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
-    font-family: 'Karla', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Red Hat Display', sans-serif;
+    // font-family: 'DM Sans', sans-serif;
+    // font-family: 'Karla', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Red Hat Display', sans-serif;
     font-family: 'Roboto Slab', serif;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -40,8 +42,10 @@ input,
 [tabindex] {
     outline: none;
     border: none;
+    font-family: inherit;
 }
 
 a[href] {
     color: var(--text-color);
+    font-family: inherit;
 }

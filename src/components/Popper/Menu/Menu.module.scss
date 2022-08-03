@@ -1,0 +1,25 @@
+.menu-list {
+    width: 224px;
+    .menu-item {
+        height: 48px;
+        margin-left: 0;
+        width: 100%;
+        max-height: fit-content;
+        background-color: transparent;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 6px 16px;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+}
