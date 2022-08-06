@@ -8,6 +8,7 @@
     border: 1px solid transparent;
     background-color: transparent;
     user-select: none;
+    font-weight: 600;
 
     + .wrapper {
         margin-left: 16px;
@@ -39,6 +40,14 @@
     color: var(--primary);
     &:hover {
         background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.grey_outline {
+    border-color: rgba(22, 24, 35, 0.12);
+    background-color: transparent;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
     }
 }
 

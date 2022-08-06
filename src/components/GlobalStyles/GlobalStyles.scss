@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Karla:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Red+Hat+Display:wght@500;700;900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
 :root {
     //color
     --primary: red;
@@ -23,18 +22,52 @@
 html {
     font-size: 62.5%;
 }
+//Font embedded
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
+}
 
 body {
-    // font-family: 'DM Sans', sans-serif;
-    // font-family: 'Karla', sans-serif;
-    // font-family: 'Montserrat', sans-serif;
-    // font-family: 'Red Hat Display', sans-serif;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'ProximaNova', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
     color: var(--text-color);
     background-color: var(--default-bgc);
+}
+//custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        padding: 8px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(84, 84, 84, 0.92);
+    }
+
+    .tippy-arrow {
+        color: #333;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
 }
 
 button,

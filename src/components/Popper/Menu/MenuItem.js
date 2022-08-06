@@ -3,9 +3,15 @@ import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
-function MenuItem({ data }) {
+function MenuItem({ data, onClick }) {
+    const isLastChild = data.currentUser && data.id === 4;
     return (
-        <Button className={cx('menu-item')} leftIcon={data.icon} to={data.to}>
+        <Button
+            className={isLastChild ? cx('last-item') : cx('menu-item')}
+            leftIcon={data.icon}
+            to={data.to}
+            onClick={onClick}
+        >
             {data.title}
         </Button>
     );
